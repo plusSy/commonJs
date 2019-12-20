@@ -1,7 +1,7 @@
-import index from './index';
+import foo from './foo';
 import demo from './demo';
 
 export default {
-    index,
+    foo,
     demo
 }

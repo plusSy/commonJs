@@ -5,10 +5,11 @@
   "main": "dist/tool.cjs.js",
   "module": "dist/commonjs.esm.js",
   "browser": "dist/commonjs.umd.js",
+  "author": "syl",
   "scripts": {
     "serve": "gulp serve",
     "build": "set NODE_ENV=production && rollup -c",
-    "dev": "rollup -c -w",
+    "build:dev": "rollup -c -w",
     "test": "node test/test.js"
   },
   "license": "MIT",
@@ -36,5 +37,9 @@
     "rollup-plugin-node-resolve": "^5.1.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:plusSy/commonJs.git"
   }
 }

@@ -17,7 +17,7 @@ export default [
 	{
 		input: 'demo/src/main.js',
 		output: {
-			name: 'ocj',
+			name: 'commonjs',
 			file: pkg.browser,
 			format: 'umd'
 		},
