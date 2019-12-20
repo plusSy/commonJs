@@ -1,23 +1,41 @@
 {
   "name": "commonjs",
-  "version": "0.0.4",
-  "description": "",
-  "main": "./dist/bundle.js",
+  "version": "0.0.1",
+  "description": "Doc Template",
+  "main": "dist/tool.cjs.js",
+  "module": "dist/time.esm.js",
+  "browser": "dist/time.umd.js",
   "scripts": {
-    "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "gulp serve",
+    "build": "NODE_ENV=production rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/plusSy/commonJs.git"
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "natives": "^1.1.6",
+    "core-js": "^2.6.10"
   },
-  "author": "syl",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/plusSy/commonJs/issues"
-  },
-  "homepage": "https://github.com/plusSy/commonJs#readme",
   "devDependencies": {
-    "rollup-plugin-json": "^4.0.0"
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "del": "^2.2.2",
+    "eslint": "^6.5.1",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jsdoc": "^3.5.3",
+    "rollup": "^1.20.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-jsdoc": "^0.1.2",
+    "rollup-plugin-node-resolve": "^5.1.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.1.2"
   }
 }
