@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import json from 'rollup-plugin-json';
 import { terser } from 'rollup-plugin-terser';
 import { eslint } from 'rollup-plugin-eslint';
 
@@ -23,7 +24,7 @@ export default [
 		},
 		plugins: [
 			resolve(),  // 这样 Rollup 能找到 `ms`
-			commonjs(), // 这样 Rollup 能转换 `ms` 为一个ES模块
+            commonjs(), // 这样 Rollup 能转换 `ms` 为一个ES模块
 			eslint({
 				throwOnError: true,
 				throwOnWarning: true,
@@ -35,7 +36,8 @@ export default [
 				// 使plugin-transform-runtime生效
 				runtimeHelpers: true,
 			}),
-			!isDev && terser()
+            !isDev && terser(),
+            json()
 		]
 	},
 
@@ -51,6 +53,9 @@ export default [
 		output: [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' }
-		]
+        ],
+        plugins:[
+            json()
+        ]
 	}
 ];
