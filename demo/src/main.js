@@ -1,7 +1,10 @@
-import foo from './foo';
-import demo from './demo';
+
+import nameSpace from './nameSpace';
+import filter from './filter/index';
+import valid from './valid/index';
 
 export default {
-    foo,
-    demo
+    valid,
+    nameSpace,
+    filter
 }

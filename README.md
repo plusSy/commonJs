@@ -59,7 +59,7 @@ npm unpublish  <package name> --force
 | +-- src                               // 脚本目录
 | | +-- *.js                            // 脚本文件
 | | +-- main.js                         // 脚本入口文件
-| +-- tutorials                         // jsdioc 的教程/样例目录
+| +-- tutorials                         // jsdoc 的辅助教程/样例目录
 | | +-- demo.html                       // jsdoc html 教程
 | | +-- markdown.md                     // jsdoc markedown 教程
 | +-- jsdoc-conf.json                   // jsdoc 配置文件
