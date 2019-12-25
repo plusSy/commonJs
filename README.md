@@ -40,12 +40,14 @@ npm unpublish  <package name> --force
     npm install
     npm run serve
     ```
+
 ## 脚本命令
 ```js
 "serve": "gulp serve",                              // 启动 jsdoc 项目
 "build": "set NODE_ENV=production && rollup -c",    // 构建 js 文件
 "build:dev": "rollup -c -w",                        // 构建 js 文件 并 动态编译
 "test": "node test/test.js"                         // 测试
+"deploy": "node serve/deploy.js"                    // doc文件部署
 ```
 + 这里`serve`任务做了三件事
     + 监听 scss 文件，编译成 css 对应存入 static 目录下
@@ -53,6 +55,8 @@ npm unpublish  <package name> --force
     + 触发 gulp-jsdoc 生成文档 
 + `build` 任务以及 `build:dev` 任务是进行脚本构建
 + `test` 任务是进行脚本测试
++ `deploy` doc 文件 压缩 部署
+
 ## 目录结构
 ```js
 +-- demo                                // 文档目录
@@ -67,6 +71,7 @@ npm unpublish  <package name> --force
 +-- doc                                 // 文档生成目录
 +-- node_modules                        // 项目依赖
 +-- scss                                // 样式修改
++-- serve                               // 部署文件
 +-- static                              // 静态资源文件
 | +-- img                               // 图片
 | +-- scriprs                           // 脚本

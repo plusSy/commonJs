@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const deliverClient = require('./client');
 const archiver = require('archiver'),
   fileName = 'commonJs.zip',
