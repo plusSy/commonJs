@@ -5,7 +5,7 @@
       "hardwrap": true
   },
   "templates": {
-      "name": "Doc Template",
+      "name": "commonJS Doc",
       "tabNames":{
           "tutorials":"wiki"
       }

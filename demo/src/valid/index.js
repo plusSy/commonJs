@@ -5,8 +5,10 @@
 /**
  * @description 证件号码验证
  * @example
- *  const IDCard = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/g;
+ *  import { IDCard }  from 'commonJs';
+ *  // const IDCard = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/g;
  *  const reg = new RegExp(IDCard);
+ *
  *  reg.test(123456)
  *  //=> false
  *
@@ -18,8 +20,10 @@ const IDCard = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/g;
 /**
  * @description 数字验证
  * @example
- *  const Number = /^[0-9]*$/g;
+ *  import { Number }  from 'commonJs';
+ *  // const Number = /^[0-9]*$/g;
  *  const reg = new RegExp(Number);
+ *
  *  reg.test('非数字')
  *  //=> false
  *
@@ -31,8 +35,10 @@ const Number = /^[0-9]*$/g;
 /**
  * @description 6位数验证码验证
  * @example
- *  const VerificationCode = /^\d{6}$/g;
+ *  import { VerificationCode }  from 'commonJs';
+ *  // const VerificationCode = /^\d{6}$/g;
  *  const reg = new RegExp(VerificationCode);
+ *
  *  reg.test('123456')
  *  //=> false
  *
@@ -44,8 +50,10 @@ const VerificationCode = /^\d{6}$/g;
 /**
  * @description 手机号码验证
  * @example
- *  const MobilePhoneNumber = /^(\+)?(\d{2,3})?1\d{10}$/;
+ *  import { MobilePhoneNumber }  from 'commonJs';
+ *  // const MobilePhoneNumber = /^(\+)?(\d{2,3})?1\d{10}$/;
  *  const reg = new RegExp(MobilePhoneNumber);
+ *
  *  reg.test(+8616688886666)
  *  //=> true
  *
@@ -61,8 +69,10 @@ const MobilePhoneNumber = /^(\+)?(\d{2,3})?1\d{10}$/;
 /**
  * @description 电话号码验证
  * @example
- *  const TelPhoneNumber = /^0\d{2,3}-?\d{7,8}$/;
+ *  import { TelPhoneNumber }  from 'commonJs';
+ *  // const TelPhoneNumber = /^0\d{2,3}-?\d{7,8}$/;
  *  const reg = new RegExp(TelPhoneNumber);
+ *
  *  reg.test(021-51119900)
  *  //=> true
  *
@@ -77,8 +87,10 @@ const TelPhoneNumber = /^0\d{2,3}-?\d{7,8}$/;
 /**
  * @description 网址地址验证
  * @example
- *  const Www = /\b(([\w-]+:\/\/?|www[.])[^\s()<>]+(?:[\w\d]+|([^[:punct:]\s]|\/)))/;
+ *  import { Www }  from 'commonJs';
+ *  // const Www = /\b(([\w-]+:\/\/?|www[.])[^\s()<>]+(?:[\w\d]+|([^[:punct:]\s]|\/)))/;
  *  const reg = new RegExp(Www);
+ *
  *  reg.test('www.ocj.com.cn)'
  *  //=> true
 */
@@ -87,8 +99,10 @@ const Www = /\b(([\w-]+:\/\/?|www[.])[^\s()<>]+(?:[\w\d]+|([^[:punct:]\s]|\/)))/
 /**
  * @description 邮箱地址输入验证
  * @example
- *  const Email = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+ *  import { Email }  from 'commonJs';
+ *  // const Email = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
  *  const reg = new RegExp(Email);
+ *
  *  reg.test('ocj.com@opg.cn')
  *  //=> true
 */
@@ -97,8 +111,10 @@ const Email = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}
 /**
  * @description 统一社会信用代码验证
  * @example
- *  const CreditCode = /^[^_IOZSVa-z\W]{2}\d{6}[^_IOZSVa-z\W]{10}$/g;
+ *  import { CreditCode }  from 'commonJs';
+ *  // const CreditCode = /^[^_IOZSVa-z\W]{2}\d{6}[^_IOZSVa-z\W]{10}$/g;
  *  const reg = new RegExp(CreditCode);
+ *
  *  reg.test('310000400369272')
  *  //=> true
 */
@@ -107,8 +123,10 @@ const CreditCode = /^[^_IOZSVa-z\W]{2}\d{6}[^_IOZSVa-z\W]{10}$/g;
 /**
  * @description 传真验证
  * @example
- *  const Fax = /^(\d{3,4}-)?\d{7,8}$/;
+ *  import { Fax }  from 'commonJs';
+ *  // const Fax = /^(\d{3,4}-)?\d{7,8}$/;
  *  const reg = new RegExp(Fax);
+ *
  *  reg.test(021-51119900)
  *  //=> true
 */
@@ -117,8 +135,10 @@ const Fax = /^(\d{3,4}-)?\d{7,8}$/;
 /**
  * @description 中文、英文、数字 混合正则
  * @example
- *  const ChEnNumber = /^[a-zA-Z0-9\u4e00-\u9fa5]+$/g;
+ *  import { ChEnNumber } from 'commonJs';
+ *  // const ChEnNumber = /^[a-zA-Z0-9\u4e00-\u9fa5]+$/g;
  *  const reg = new RegExp(ChEnNumber);
+ *
  *  reg.test('你好 word 123')
  *  //=> false
  *
@@ -130,8 +150,10 @@ const ChEnNumber = /^[a-zA-Z0-9\u4e00-\u9fa5]+$/g;
 /**
  * @description 正整数 正则
  * @example
- *  const positiveInteger = /^\+?[1-9]\d*$/g;
+ *  import { positiveInteger } from 'commonJs';
+ *  // const positiveInteger = /^\+?[1-9]\d*$/g;
  *  const reg = new RegExp(positiveInteger);
+ *
  *  reg.test(-123)
  *  //=> false
  *
@@ -143,8 +165,10 @@ const positiveInteger = /^\+?[1-9]\d*$/g;
 /**
  * @description 邮编 正则
  * @example
+ *  import { PostalCode } from 'commonJs';
  *  const PostalCode = /^[a-zA-Z0-9 ]{3,12}$/;
  *  const reg = new RegExp(PostalCode);
+ *
  *  reg.test(200000)
  *  //=> true
 */
