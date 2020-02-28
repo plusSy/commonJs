@@ -88,5 +88,3 @@ npm unpublish  <package name> --force
 +-- README.md
 +-- rollup.config.js                    // 工具库构建配置
 ```
-
-## test commit
