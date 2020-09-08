@@ -1,6 +1,6 @@
 {
   "name": "commonjs",
-  "version": "0.0.5",
+  "version": "0.0.3",
   "description": "Doc Template",
   "main": "dist/tool.cjs.js",
   "module": "dist/commonjs.esm.js",
@@ -16,8 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.22.0",
-    "natives": "^1.1.6",
-    "core-js": "^2.6.10"
+    "core-js": "^2.6.10",
+    "natives": "^1.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
